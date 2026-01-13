@@ -7,14 +7,14 @@ from pathlib import Path
 from typing import List, Dict, Any
 import logging
 
-from langchian_community.document_loaders import(
+from langchain_community.document_loaders import(
     PyPDFLoader,
     TextLoader,
     UnstructuredMarkdownLoader,
     Docx2txtLoader
 ) 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langahcian.schema import Document
+from langchain.schema import Document
 
 from src.config import settings
 
