@@ -168,3 +168,4 @@ def load_documents(path: str) -> List[Document]:
         raise ValueError(f"Invalid path: {path}")
     
 
+docloader=DocumentLoader()
