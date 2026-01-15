@@ -3,7 +3,7 @@ Configuration management for RAG Knowledge Base
 Uses ppydantic-settings for type-safe configuration with environment vairables
 """
 
-from pydantic_settings import BaseSettings, SetttingsConfigDict
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from pathlib import Path 
 
 class Settings(BaseSettings):

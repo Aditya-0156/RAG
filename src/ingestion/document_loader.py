@@ -2,8 +2,13 @@
 Document loader for RAG Knowledge Base
 Loads and processes documents from vaious file formats
 """
+import sys
 
 from pathlib import Path
+# Add project root to Python path
+project_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(project_root))
+
 from typing import List, Dict, Any
 import logging
 
@@ -13,9 +18,8 @@ from langchain_community.document_loaders import(
     UnstructuredMarkdownLoader,
     Docx2txtLoader
 ) 
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.schema import Document
-
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_core.documents import Document
 from src.config import settings
 
 #Set up logging
@@ -33,10 +37,10 @@ class DocumentLoader:
     def __init__(self):
         """Initialize the document loader with text splitter."""
 
-        self.text_splitter=RecusriveCharacterTextSplitter(
+        self.text_splitter=RecursiveCharacterTextSplitter(
             chunk_size=settings.chunk_size,
             chunk_overlap=settings.chunk_overlap,
-            length_fucntion=len,
+            length_function=len,
             separators=["\n\n", "\n", " ", ""]
             )
         
@@ -47,7 +51,7 @@ class DocumentLoader:
             ".docx": Docx2txtLoader
         }
     
-    def load_document(self, file_path:str) -> List[document]:
+    def load_document(self, file_path:str) -> List[Document]:
         """
         Docstring for load_document
         Load a single doument from a file path
@@ -167,5 +171,3 @@ def load_documents(path: str) -> List[Document]:
     else:
         raise ValueError(f"Invalid path: {path}")
     
-
-docloader=DocumentLoader()
