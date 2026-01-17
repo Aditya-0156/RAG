@@ -16,11 +16,11 @@ import logging
 import google.generativeai as genai
 from langchain_core.documents import Document
 
+#Setup logging
 from src.config import settings
-
-# Set up logging
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger=logging.getLogger(__name__)
+
 
 
 class EmbeddingGenerator:
