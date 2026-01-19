@@ -137,7 +137,6 @@ class Retriever:
         documents = self.retrieve(query, top_k=top_k)
         return self.format_context(documents)
 
-
 if __name__ == "__main__":
     print("Testing Retriever...")
     print("=" * 50)
