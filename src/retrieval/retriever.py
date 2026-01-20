@@ -123,6 +123,7 @@ class Retriever:
         
         return "\n\n---\n\n".join(context_parts)
     
+    
     def get_relevant_context(self, query: str, top_k: Optional[int] = None) -> str:
         """
         One-step method: retrieve documents and format as context.
