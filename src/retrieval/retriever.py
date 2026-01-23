@@ -29,7 +29,6 @@ class Retriever:
     Acts as the bridge between user questions and the vector store,
     formatting results for use with the LLM.
     """
-    
     def __init__(self, collection_name: Optional[str] = None):
         """
         Initialize the retriever.
@@ -198,4 +197,3 @@ if __name__ == "__main__":
         print(f"❌ Error: {e}")
         import traceback
         traceback.print_exc()
-        
