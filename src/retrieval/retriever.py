@@ -44,7 +44,6 @@ class Retriever:
     def retrieve(self, query: str, top_k: Optional[int] = None) -> List[Document]:
         """
         Retrieve relevant documents for a query.
-        
         Args:
             query: User's question or search query
             top_k: Number of documents to retrieve (optional)
