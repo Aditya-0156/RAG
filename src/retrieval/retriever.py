@@ -47,7 +47,6 @@ class Retriever:
         Args:
             query: User's question or search query
             top_k: Number of documents to retrieve (optional)
-            
         Returns:
             List of Document objects with relevant content
         """
