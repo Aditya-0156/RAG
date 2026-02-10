@@ -106,7 +106,7 @@ python main.py --mode web
 
 Open `http://localhost:8000` in your browser. Drag and drop files to upload, then ask questions.
 
-![Web UI Screenshot](https://via.placeholder.com/800x400?text=Add+screenshot+here)
+![Web UI Screenshot](screenshots/web-ui.png)
 
 ### CLI
 
