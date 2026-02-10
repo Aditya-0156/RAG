@@ -1,36 +1,31 @@
-# Core RAG dependencies
+# Core
 langchain>=0.1.0
+langchain-core>=0.1.0
 langchain-community>=0.0.10
-langchain-openai>=0.0.5
+langchain-text-splitters>=0.0.1
 
-# Vector stores
+# Vector store
 chromadb>=0.4.22
-faiss-cpu>=1.7.4
 
 # Document processing
 pypdf>=4.0.0
 python-docx>=1.1.0
 markdown>=3.5
 
-# Embeddings
-sentence-transformers>=2.3.0
-openai>=1.10.0
+# Google Gemini
+google-genai>=1.0.0
 
 # Utilities
 python-dotenv>=1.0.0
 pydantic>=2.5.0
 pydantic-settings>=2.1.0
 
-# Development tools
+# Web interface
+fastapi>=0.109.0
+uvicorn>=0.27.0
+python-multipart>=0.0.6
+
+# Development
 pytest>=7.4.0
 black>=24.0.0
 ruff>=0.1.0
-pre-commit>=3.6.0
-
-# API (optional, for later)
-fastapi>=0.109.0
-uvicorn>=0.27.0
-
-# Google Gemini
-google-generativeai>=0.3.0
-langchain-google-genai>=0.0.5
